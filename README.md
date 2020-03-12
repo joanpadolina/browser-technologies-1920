@@ -1,141 +1,224 @@
-# Browser Technologies @cmda-minor-web 1920
-//Robuuste, toegankelijke websites ontwerpen en maken …
+# Browser Technologies
 
-In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.
+# Table of contents
+1. [Introduction](#introduction)
+1. [Features research](#features)
+1. [Three devices](#three-devices)
+1. [Diffenrent browser](#different-browser)
+1. [Reader](#reader)
 
-Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen ... Hoe zorg je er dan voor dat websites het altijd doen?
 
-## Leerdoelen
-- _Wat is Progressive enhancement en hoe kun je dit toepassen._
-- _Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund._
-- _Leren een Browser Technologies onderzoeken, testen en implementeren als enhancement._
+# Introduction
 
-[Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/edit?usp=sharing)
+In this course there is a lot of research about how the browser respond to design we create for the users. It's a process that everyone knows but no on inmplements it the their designs. We tend to loose focus for the feature you are building but in the end we don't know which devices is gonna be viewed on.
 
-## Planning
 
-| Planning  | Woensdag  |  Donderdag | Vrijdag  |
-|---|---|---|---|
-| <a href=#week-1>Week 1</a>  | Introductie, College over Progressive enhancement + briefing opdracht 1.1 | College Browser detect + presentaties opdracht 1.1 + briefing opdracht 1.2 Fork je OBA  | Feedbackgesprekken + Bowlen! |
-| <a href=#week-2>Week 2</a>  | College Feature detect + Briefing opdracht 2  | College Browsers + werken aan de opdracht | Feedbackgesprekken  |
-| <a href=#week-3>Week 3</a>  | College Notificaties + werken aan de opdracht  |  Werken aan de opdracht | Beoordelingsgesprekken  |
+# Features
 
+1. Image turned of
+1. Custom fonts 
+1. Color and Colorblindness
+1. Mouse and trackpad
+1. Slow internet
+1. Javascript turned of
+1. Cookies and Local storage turned of
 
+## Feature individual research
 
-## Programma
+### Custom fonts 
 
-### Week 1
-Het web is voor iedereen. Leren over Progressive enhancement en kennismaken met testen en het device lab. [Planning week 1](./slides/Week1.png)
+* Search the problems
 
-#### Woensdag
-- [Les 1 - Progressive enhancement & Briefing Opdracht 1.1](./slides/BT1920%20College%20Les1%20-%20Progressive%20Enhancement.pdf)
-- [Opdracht 1.1 - Breek het web](Opdracht1.1.md)
+https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/
+ 
+In the arcticle provided by CSS-tricks they mention that, if a site uses a lot custom fonts, it will load slower. Because it need to be loaded by another library.
 
-#### Weekly Nerd
-Sanne 't Hooft over Interactie. Woensdag 11 Maart, 16:00 in het minorlokaal.
+ 
+https://blog.logrocket.com/how-to-use-web-fonts-in-css-a0326f4d6a4d/
 
-#### Donderdag
-- [Les 2 - Features testen & Briefing opdracht 1.2](./slides/BT1920%20College%20Les2%20-%20Progressive%20Enhancement.pdf)
-- [Opdracht 1.2 - Fork je OBA](Opdracht1.2.md)
+Also in this article they mention the more fonts the slower the performce shall be. But to make your site more recognizable you van use the standard fonts from the os.
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [Everyone has JavaScript, right? by Stuart Langridge](https://kryogenix.org/code/browser/everyonehasjs.html)
-- [The Web I Want by Chris James](https://dev.to/quii/the-web-i-want-43o)
+If a website is using icon fonts this will also be turned of.
 
+ 
+* How can you test it
 
-#### Vrijdag
-Feedbackgesprekken opdracht 1.2 in groepjes en studentassistenten en docenten.
+To test the custom fonts you can delete this in the inspector
+ 
+* Find a website with this
 
-Deze les gaan we onderstaand artikel bespreken:
-- [Lezen: Understanding Progressive Enhancement by Aaron Gustafson](https://alistapart.com/article/understandingprogressiveenhancement)
+There is no significant changes if it's turned of. The website like instagram or facebook will have the default font.
 
+* How to solve this
 
+The icon can be an svg or just plain png. Here you won't risk losing the icon if the font is disabled.
 
 
 
-### Week 2
-Wat laat je zien als een browser of gebruiker een 'enhancement' niet kan tonen of zien? Hoe doe je Feature Detection en wat doe je als een techniek niet werkt of wordt ondersteund? [Planning week 2](./slides/Week2.png)
+### Javascript
 
-#### Woensdag
-- [Les 3 - Over Feature detect & Briefing opdracht 2]()
-- [Opdracht 2 - Progressive Enhanced Browser Technologie](Opdracht2.md)
+* Zoek uit welke problemen ze kunnen veroorzaken (verzamel cijfers, meningen, ervaringen)
+ 
+https://www.searchenginepeople.com/blog/stats-no-javascript.html 
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [The Role of Enhancement in Web Design by Raluca Budiu / Nielsen Norman Group](https://www.nngroup.com/articles/enhancement/)
-- [Accessibility Through Semantic HTML by Laura Kalbag](https://24ways.org/2017/accessibility-through-semantic-html/)
+An research in 2010 showed home many user has turned of javascript whilst visiting the populair website Yahoo!. The website has been visited by many people and the donut diagram shows that only 2% has javascript turn of.
 
+<img src="./readme%20assets/yahoo.png">
 
-#### Weekly Nerd
-PE bij de Voorhoede.
+This would be 200 out of 10.000 visitors. So you'll wonder if it's worth changing for that group of people and why would you change it?
+The only this they are missing are some interaction or functionalities.
+ 
+ 
+https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/
+ 
 
+<img src="./readme%20assets/ukscreen.png">
 
-#### Donderdag
-- [Les 4 - Over Browsers]()
+An article from UK is actualy almost the same as from the article of 2010. The only difference is the year. This one is released on 2013.
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [The accessibility mindset by Eric Eggert](https://24ways.org/2015/the-accessibility-mindset/)
-- [HTML: The Inaccessible Parts](https://daverupert.com/2020/02/html-the-inaccessible-parts/)
+1.1% is 1 out of 93 people from the UK.
+ 
+ 
+* How to test this
 
+The feature can be turned of using Web Dev tools in chrome. This is a plugin in everyone can download.
 
-#### Vrijdag
-Code review en feedbackgesprekken opdracht 2.
+<!-- 
+Deze features heb ik uitgezet door de chrome web dev plugin te downloaden en bepaalde css of js elementen uit te zetten.
+De feature kan ook niks zonder internet en is dus niet toegankelijk als je slechte verbinding heb. -->
+ 
+* Website without javascript
 
+<img src="./readme%20assets/weer.png">
+<img src="./readme%20assets/weer2.png">
 
+www.weer.nl
 
+Weather api is been loaded through javascript. Is javascript is turned of a lot of information is denied or not loaded. This including without a lot of images. The downside is mainly becasuse now you won't know the weather forecast.
 
-### Week 3
-Deze week werken we verder aan opdracht 2. [Planning week 3](./slides/Week3.png)
 
+* How to fix
 
-#### Woensdag
-- [Les 5 - Over Notificaties]()
+Might want to render this api serversided.
 
-Deze les gaan we onderstaande artikelen bespreken:
-- [Progressive Enhancement and Data Visualizations by Chris Coyier](https://css-tricks.com/progressive-enhancement-data-visualizations/)
-- [Make the Web Work For Everyone by Justin Crawford, Chris Mills, Ali Spivak](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/)
+# Three devices
 
+<img src="./readme%20assets/pic.jpg">
+<img src="./readme%20assets/pic1.jpg">
 
-#### Weekly Nerd
-Op bezoek bij Bol.com
+## iPod
 
+```
+//whichbrowser.net
 
-#### Donderdag
-Verder werken aan opdracht 2
+- Safari
+- ios 6.1.6
+- Mozilla/5.0 (Ipod, CPU OS 6_1_6 like Mac OS X)
+- AppleWebkit/536.26 (KHTML, like Gecko)
+- Version/6.0 Mobile/10B500 Safari/8536.25
+```
 
+The OBA webapp for childres has no functionalities if browsing through an old iPod. There is no Javascript enabled so images and content wouldn't load. The API is there for not usable via an ipod. 
+The form however is being loaded but the next page wont load. There is a lot of javascript going on and this will not work. 
+The input search has an auto zoom if clicked. This wil make everything a lot bigger.
 
 
-#### Vrijdag
-Code review en beoordelingsgesprekken opdracht 2.
 
+## iPad mini
 
+```
+//whichbrowser.net
 
+- Safari
+- ios 9.3.5
+- Mozilla/5.0 (iPad; CPU OS 9_3_5 like Mac OS X)
+- AppleWebkit/601.1.46 (KHTML, like Gecko)
+- Version/9.0 Mobile/13g36 Safari/601.1
 
+```
 
+The ipad mini will load the css but no javascript. So the API won't work because of the fetch. The form has more styling than the ipod but to make an assignment through the app is not enabled.
 
 
+## LG Nexus
 
+```
+//whichbrowser.net
 
+- Chrome 75
+- android 6.0.1
+- Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5)
+- AppleWebkit/537.36 (KHTML, like Gecko)
+- Chrome/75.0.3770.143 Mobile Safari/537.36
 
+```
 
+The LG is the most recent device so everything will work including the css styling and the javascript.
+Data is working and the search through the api is also enabled.
 
+# Different browser
 
+## Chrome
 
+The Basic styling and javascript is working there is no difference in the height of the forms. Other browser will show different styling like safari and brave.
 
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+### Image turned of
 
-<!-- ☝️ replace this description with a description of your own work -->
+When image is disabled the structure of the webapp remains stable. There is no difference in the skeleton so this is a good thing. Becase the image has a set of width and height the structure is untouched.
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+<img src="./readme%20assets/img%20off.png">
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+The only downside of removing te image is of the ALT tag that is not there. This is a important thing to remember for next assignments. 
 
-<!-- Maybe a table of contents here? 📚 -->
+### Custom fonts 
+The app has only one font and this a basic font that every os knows. Which makes the app fast and durable. When turned off there will be no big difference only the fallback of the browser will be shown.
 
-<!-- How about a section that describes how to install this project? 🤓 -->
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
+### Color and Colorblindness
+<img src="./readme%20assets/colortest1.png">
+<img src="./readme%20assets/color2.png">
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+When testing for color blindness there is no big difference in the contrast. Maybe the search button is a little to dark for some. But this depends on the eyesight it self. For the form it is still readable and you know the difference between the first and the last page.
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+This test is done through the browser with [Colorblind test]('https://www.toptal.com/designers/colorfilter/').
+
+### Mouse and trackpad
+
+I came acros with a problem while trying to navigate through the webapp with only the keyboard. Both engine wont let me go to the content and bring me straight back to the browser url.
+*seen below*
+
+<img src="./readme%20assets/firefoxtabs.gif">
+
+<hr>
+
+**The goal was to be able to read the content and **Brave** did the job which firefox couldn't.**
+
+<img src="./readme%20assets/bravekeys.gif">
+
+When you reached the form page you can only navigate on the first page. The second behind it won't work because of the animation that is set on an element. This can be updated to put a button that says next page. 
+
+### Slow internet
+
+The API of the Oba doesn't change when the internet slows down. The data will be loaded at a slower rate but you get content relatively fast even on the lowest 3g mode.
+
+
+### Javascript turned of
+
+<img src="./readme%20assets/withoutjs.png">
+
+The page without javascript is just a page with a background image. The main data fetch is turned of so the data wont be loaded. 
+
+The form is also activated with javascript navigate to the next page. This is not available after switching to js and no js.
+
+To avoid this is server side rendering an option you can use.
+
+### Cookies and Local storage turned of
+
+The app uses local storage for making a paperwork. So the form that is filled in will be rendered to a template. And is pretty useless without javascript.
+
+
+
+# Reader
+
+When reading the website the voice won't end. The shortcut to stop was hard to find. When the reader is turned on via Mac OS it will also read the notification form slack. Wich is a lot information at once
