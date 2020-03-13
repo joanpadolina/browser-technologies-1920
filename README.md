@@ -4,13 +4,13 @@
 1. [Introduction](#introduction)
 1. [Features research](#features)
 1. [Three devices](#three-devices)
-1. [Diffenrent browser](#different-browser)
+1. [Different browsers](#different-browsers)
 1. [Reader](#reader)
 
 
 # Introduction
 
-In this course there is a lot of research about how the browser respond to design we create for the users. It's a process that everyone knows but no on inmplements it the their designs. We tend to loose focus for the feature you are building but in the end we don't know which devices is gonna be viewed on.
+In this course there is a lot of research about how the browser respond to design we create for the users. It's a process that everyone knows but no one inmplements it in the their designs. We tend to loose focus for the feature you are building but in the end we don't know which devices it is gonna be viewed on.
 
 
 # Features
@@ -36,18 +36,18 @@ In the arcticle provided by CSS-tricks they mention that, if a site uses a lot c
  
 https://blog.logrocket.com/how-to-use-web-fonts-in-css-a0326f4d6a4d/
 
-Also in this article they mention the more fonts the slower the performce shall be. But to make your site more recognizable you van use the standard fonts from the os.
+Also in this article they mention the more fonts the slower the performce it shall be. But to make your site more recognizable you can use some default fonts like "Roboto".
 
 If a website is using icon fonts this will also be turned of.
 
  
 * How can you test it
 
-To test the custom fonts you can delete this in the inspector
+To test the custom fonts you can delete the font-family in the inspector.
  
 * Find a website with this
 
-There is no significant changes if it's turned of. The website like instagram or facebook will have the default font.
+There is no significant changes if it's turned of. The website like instagram or facebook will have the default font. But when you use an icon font, this to will dissapear.
 
 * How to solve this
 
@@ -57,16 +57,16 @@ The icon can be an svg or just plain png. Here you won't risk losing the icon if
 
 ### Javascript
 
-* Zoek uit welke problemen ze kunnen veroorzaken (verzamel cijfers, meningen, ervaringen)
+* Search the problems
  
 https://www.searchenginepeople.com/blog/stats-no-javascript.html 
 
-An research in 2010 showed home many user has turned of javascript whilst visiting the populair website Yahoo!. The website has been visited by many people and the donut diagram shows that only 2% has javascript turn of.
+Aresearch in 2010 showed how many users has turned of javascript whilst visiting the populair website Yahoo!. The website has been visited by many people and the donut diagram shows that only 2% has javascript turn of.
 
 <img src="./readme%20assets/yahoo.png">
 
 This would be 200 out of 10.000 visitors. So you'll wonder if it's worth changing for that group of people and why would you change it?
-The only this they are missing are some interaction or functionalities.
+The only thing they are missing are some interaction or functionalities.
  
  
 https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/
@@ -81,7 +81,7 @@ An article from UK is actualy almost the same as from the article of 2010. The o
  
 * How to test this
 
-The feature can be turned of using Web Dev tools in chrome. This is a plugin in everyone can download.
+The feature can be turned of using Web Dev tools in chrome. This is a plugin from chrome.
 
 <!-- 
 Deze features heb ik uitgezet door de chrome web dev plugin te downloaden en bepaalde css of js elementen uit te zetten.
@@ -94,12 +94,13 @@ De feature kan ook niks zonder internet en is dus niet toegankelijk als je slech
 
 www.weer.nl
 
-Weather api is been loaded through javascript. Is javascript is turned of a lot of information is denied or not loaded. This including without a lot of images. The downside is mainly becasuse now you won't know the weather forecast.
-
+Weather api is being loaded through javascript. If javascript is turned of a lot of information is denied or not loaded. Also images won't load anymore. The downside is mainly of not knowing what weather it will be and where.
 
 * How to fix
 
-Might want to render this api serversided.
+Might want to render this api server sided.
+I've tested the same with my WAFS assignment and by turning the the javascript of only the client side won't load anymore.
+
 
 # Three devices
 
@@ -118,7 +119,7 @@ Might want to render this api serversided.
 - Version/6.0 Mobile/10B500 Safari/8536.25
 ```
 
-The OBA webapp for childres has no functionalities if browsing through an old iPod. There is no Javascript enabled so images and content wouldn't load. The API is there for not usable via an ipod. 
+The OBA webapp for childrens has no functionalities if browsing through an old iPod. There is no Javascript enabled so images and content wouldn't load. The API is therefor not usable via an ipod. 
 The form however is being loaded but the next page wont load. There is a lot of javascript going on and this will not work. 
 The input search has an auto zoom if clicked. This wil make everything a lot bigger.
 
@@ -137,7 +138,7 @@ The input search has an auto zoom if clicked. This wil make everything a lot big
 
 ```
 
-The ipad mini will load the css but no javascript. So the API won't work because of the fetch. The form has more styling than the ipod but to make an assignment through the app is not enabled.
+The ipad mini will load the css but no javascript. So the API won't work because of the fetch. The form has more styling than the ipod but to make an assignment through the app is also not possible.
 
 
 ## LG Nexus
@@ -156,7 +157,7 @@ The ipad mini will load the css but no javascript. So the API won't work because
 The LG is the most recent device so everything will work including the css styling and the javascript.
 Data is working and the search through the api is also enabled.
 
-# Different browser
+# Different browsers
 
 ## Chrome
 
@@ -165,11 +166,11 @@ The Basic styling and javascript is working there is no difference in the height
 
 ### Image turned of
 
-When image is disabled the structure of the webapp remains stable. There is no difference in the skeleton so this is a good thing. Becase the image has a set of width and height the structure is untouched.
+When image is disabled the structure of the webapp remains stable. There is no difference in the skeleton so this is a good thing. Because the image has a set of width and height the structure is untouched.
 
 <img src="./readme%20assets/img%20off.png">
 
-The only downside of removing te image is of the ALT tag that is not there. This is a important thing to remember for next assignments. 
+The only downside of removing te image is of the ALT tag that is not there. This is a important thing to remember for upcomming assignments.
 
 ### Custom fonts 
 The app has only one font and this a basic font that every os knows. Which makes the app fast and durable. When turned off there will be no big difference only the fallback of the browser will be shown.
@@ -185,7 +186,7 @@ This test is done through the browser with [Colorblind test]('https://www.toptal
 
 ### Mouse and trackpad
 
-I came acros with a problem while trying to navigate through the webapp with only the keyboard. Both engine wont let me go to the content and bring me straight back to the browser url.
+I came accros a problem while trying to navigate through the webapp with only the keyboard. Both engine wont let me go to the content and bring me straight back to the browser url.
 *seen below*
 
 <img src="./readme%20assets/firefoxtabs.gif">
@@ -211,7 +212,7 @@ The page without javascript is just a page with a background image. The main dat
 
 The form is also activated with javascript navigate to the next page. This is not available after switching to js and no js.
 
-To avoid this is server side rendering an option you can use.
+To avoid this is, server side rendering is an option you can use.
 
 ### Cookies and Local storage turned of
 
