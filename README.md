@@ -121,7 +121,13 @@ I've tested the same with my WAFS assignment and by turning the the javascript o
 
 The OBA webapp for childrens has no functionalities if browsing through an old iPod. There is no Javascript enabled so images and content wouldn't load. The API is therefor not usable via an ipod. 
 The form however is being loaded but the next page wont load. There is a lot of javascript going on and this will not work. 
-The input search has an auto zoom if clicked. This wil make everything a lot bigger.
+The input search has an auto zoom if clicked. This will make everything a lot bigger.
+
+**Tips and Tricks**
+
+Because the oba app depends on Javascript the page won't render any data. This because of the new method of fetching through Javascript. Some older browser don't detect newer methods. A work-a-round of this problem can be to fetch the api through the server. So the data can be rendered clientside.
+
+For the css it's probably the same problem. The key here is to use semantic html to give the user atleast the feedback they expect. So if for the forms, show it underneath easy fieldset and don't create javascript activated keys as a progressive disclosures. 
 
 
 
@@ -198,6 +204,12 @@ I came accros a problem while trying to navigate through the webapp with only th
 <img src="./readme%20assets/bravekeys.gif">
 
 When you reached the form page you can only navigate on the first page. The second behind it won't work because of the animation that is set on an element. This can be updated to put a button that says next page. 
+
+**Possible solutions** 
+
+Because of this problem it't not clear but after research I found out it's a Mac os kind of thing. The following links show you how to activate the tab option through websites.
+[Firefox MacOS tab navigation](https://stackoverflow.com/questions/11704828/how-to-allow-keyboard-focus-of-links-in-firefox/11713537)
+
 
 ### Slow internet
 
