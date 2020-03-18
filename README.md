@@ -10,7 +10,7 @@
 
 # Introduction
 
-In this course there is a lot of research about how the browser respond to design we create for the users. It's a process that everyone knows but no one inmplements it in the their designs. We tend to loose focus for the feature you are building but in the end we don't know which devices it is gonna be viewed on.
+In this course there is a lot of research about how the browser respond to design we create for the users. It's a process that everyone knows but no one implements it in the their designs. We tend to loose focus for the feature you are building but in the end we don't know which devices it is gonna be viewed on.
 
 
 # Features
@@ -205,6 +205,7 @@ I came accros a problem while trying to navigate through the webapp with only th
 
 When you reached the form page you can only navigate on the first page. The second behind it won't work because of the animation that is set on an element. This can be updated to put a button that says next page. 
 
+
 **Possible solutions** 
 
 Because of this problem it't not clear but after research I found out it's a Mac os kind of thing. The following links show you how to activate the tab option through websites.
@@ -230,6 +231,9 @@ To avoid this is, server side rendering is an option you can use.
 
 The app uses local storage for making a paperwork. So the form that is filled in will be rendered to a template. And is pretty useless without javascript.
 
+**Possible Solutions**
+
+Create an eviroment where the user can save it server-sided. So its available on every device.
 
 
 # Reader
