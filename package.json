@@ -1,0 +1,34 @@
+{
+  "name": "browser-tech-shirtdesign",
+  "version": "1.0.0",
+  "description": "create an application that's is user friendly for all the browsers and devices",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joanpadolina/browser-technologies-1920.git"
+  },
+  "keywords": [
+    "browser",
+    "tech",
+    "minor",
+    "webdev"
+  ],
+  "author": "Joan Padolina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joanpadolina/browser-technologies-1920/issues"
+  },
+  "homepage": "https://github.com/joanpadolina/browser-technologies-1920#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

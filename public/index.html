@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser technologies</title>
+</head>
+
+<body>
+    <h1>Bomb-ass-Design</h1>
+
+    <p>
+        Create your own custom shirt.
+        Design from scratch.
+    </p>
+
+    <section>
+        <h2>
+            Steps
+        </h2>
+        <ol>
+            <li>Fill in your text</li>
+            <li>Customize your shirt</li>
+            <li>Print!</li>
+        </ol>
+    </section>
+
+    <h2>
+        Begin designing your shirt!
+    </h2>
+    <img src="img/shirt.svg" width="300px" alt="">
+
+    <form action="/funky-shirt" method="POST">
+        <fieldset>
+            <legend>The shirt</legend>
+            <div>
+                <label for="text-shirt">Fill in your text</label>
+                <input type="text" name="textshirt" id="text-shirt">
+            </div>
+            <div>
+                <legend>Color shirt</legend>
+                <input type="radio" id="blue" name="colorshirt" value="blue">
+                <label for="blue">Blue</label><br>
+                <input type="radio" id="red" name="colorshirt" value="red">
+                <label for="red">Red</label><br>
+                <input type="radio" id="yello" name="colorshirt" value="yellow">
+                <label for="yellow">Yellow</label>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Customize</legend>
+            <div>
+                <legend>Color text</legend>
+                <input type="radio" id="black" name="colortext" value="black">
+                <label for="black">Black</label><br>
+                <input type="radio" id="blue2" name="colortext" value="blue">
+                <label for="blue2">Blue</label><br>
+                <input type="radio" id="white" name="colortext" value="white">
+                <label for="white">White</label>
+            </div>
+            <div>
+
+                <legend>Type of shirt</legend>
+                <input type="radio" name="typeshirt" value="t-shirt" id="t-shirt">
+                <label for="t-shirt">T-shirt</label> <br>
+                <input type="radio" name="typeshirt" value="hoodie" id="hoodie">
+                <label for="hoodie">Hoodie</label><br>
+                <input type="radio" name="typeshirt" value="long-sleeve" id="long-sleeve">
+                <label for="long-sleeve">Long-sleeve</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <input type="button" value="save">
+            <input type="submit" value="print">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
