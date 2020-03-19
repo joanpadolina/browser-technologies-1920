@@ -21,6 +21,7 @@ In this course there is a lot of research about how the browser respond to desig
 1. [Credits](#credits)
 
 <img src="readme assets/sketch 1.jpeg">
+
 ## Installation
 
 
