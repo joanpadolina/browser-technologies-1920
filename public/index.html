@@ -30,9 +30,21 @@
     <h2>
         Begin designing your shirt!
     </h2>
-    <img src="img/shirt.svg" width="300px" alt="">
+    <img src="img/shirt.svg" width="300px" alt="shirt">
 
-    <form action="/funky-shirt" method="POST">
+    <form action="/getOld" method="GET">
+        <input type="text" name="search">
+        <input type="submit" value="search">
+    </form>
+
+    <form id="tshirtdesigning" action="/form" method="POST">
+        <fieldset>
+            <legend>For who is this shirt?</legend>
+            <input type="radio" id="men" name="gender" value="Men">
+            <label for="men">Straight no curves</label>
+            <input type="radio" id="woman" name="gender" value="Women">
+            <label for="woman">Need space for boobs</label>
+        </fieldset>
         <fieldset>
             <legend>The shirt</legend>
             <div>
@@ -41,12 +53,21 @@
             </div>
             <div>
                 <legend>Color shirt</legend>
-                <input type="radio" id="blue" name="colorshirt" value="blue">
-                <label for="blue">Blue</label><br>
-                <input type="radio" id="red" name="colorshirt" value="red">
-                <label for="red">Red</label><br>
-                <input type="radio" id="yello" name="colorshirt" value="yellow">
-                <label for="yellow">Yellow</label>
+
+                <label for="blue">
+                    <input type="radio" id="blue" name="colorshirt" value="Blue">
+                    Blue
+                </label>
+
+                <label for="red">
+                    <input type="radio" id="red" name="colorshirt" value="Red">
+                    Red
+                </label>
+
+                <label for="yellow">
+                    <input type="radio" id="yellow" name="colorshirt" value="Yellow">
+                    Yellow
+                </label>
             </div>
 
         </fieldset>
@@ -54,28 +75,46 @@
             <legend>Customize</legend>
             <div>
                 <legend>Color text</legend>
-                <input type="radio" id="black" name="colortext" value="black">
-                <label for="black">Black</label><br>
-                <input type="radio" id="blue2" name="colortext" value="blue">
-                <label for="blue2">Blue</label><br>
-                <input type="radio" id="white" name="colortext" value="white">
-                <label for="white">White</label>
+
+                <label for="black">
+                    <input type="radio" id="black" name="colortext" value="Black">
+                    Black
+                </label>
+
+                <label for="blue2">
+                    <input type="radio" id="blue2" name="colortext" value="Blue">
+                    Blue
+                </label>
+
+                <label for="white">
+                    <input type="radio" id="white" name="colortext" value="White">
+                    White
+                </label>
             </div>
             <div>
 
                 <legend>Type of shirt</legend>
-                <input type="radio" name="typeshirt" value="t-shirt" id="t-shirt">
-                <label for="t-shirt">T-shirt</label> <br>
-                <input type="radio" name="typeshirt" value="hoodie" id="hoodie">
-                <label for="hoodie">Hoodie</label><br>
-                <input type="radio" name="typeshirt" value="long-sleeve" id="long-sleeve">
-                <label for="long-sleeve">Long-sleeve</label>
+
+                <label for="t-shirt">
+                    <input type="radio" name="typeshirt" value="T-Shirt" id="t-shirt">
+                    T-shirt
+                </label>
+
+                <label for="hoodie">
+                    <input type="radio" name="typeshirt" value="Hoodie" id="hoodie">
+                    Hoodie
+                </label>
+
+                <label for="long-sleeve">
+                    <input type="radio" name="typeshirt" value="Long-sleeve" id="long-sleeve">
+                    Long-sleeve
+                </label>
             </div>
         </fieldset>
 
         <fieldset>
-            <input type="button" value="save">
-            <input type="submit" value="print">
+            <input type="button" name="save" value="save">
+            <input type="submit" name="print" value="print">
         </fieldset>
     </form>
 

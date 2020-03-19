@@ -27,8 +27,12 @@
   },
   "homepage": "https://github.com/joanpadolina/browser-technologies-1920#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "generate-unique-id": "^2.0.0",
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.5",
     "path": "^0.12.7"
   }
 }
