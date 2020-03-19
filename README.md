@@ -34,9 +34,15 @@ __clone repository__
 git clone https://github.com/joanpadolina/browser-technologies-1920.git
 ```
 
-__.env__
+__npm install__
 
 ```
+npm i
+```
+
+__.env__
+
+```env
 DB_URL=mongodb+srv://DB_USER:DB_PASS@<your_link>.mongodb.net/browsertech
 DB_PORT=27017
 DB_NAME= <database name>
