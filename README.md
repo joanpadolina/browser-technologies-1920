@@ -96,7 +96,10 @@ __Javascript__
 
 # Layers
 
+
 ## HTML-only
+
+*first test, for the sketches please read it in the [wiki](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design)* 
 
 __Form Post__
 In the first layer the focus was mainly on making the form work. This has been possible through rendering it server-sided. The data would then be added to a database, in this case to Mongo DB.
