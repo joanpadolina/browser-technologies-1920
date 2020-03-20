@@ -11,7 +11,7 @@ const port = process.env.PORT
 const dbName = process.env.DB_NAME
 
 app
-    .use(express.static(path.join(__dirname, 'public')))
+    .use(express.static('public'))
     .use(express.urlencoded({
         extended: true
     }))
@@ -30,9 +30,7 @@ mongo.MongoClient.connect(url,{useNewUrlParser: true, useUnifiedTopology: true} 
 })
 
 app
-    .get('/', (req, res) => res.render('form.ejs', {
-        data: results
-    }))
+    .get('/', (req, res) => res.render('form.ejs'))
     .get('/funky-shirt/:id', (req, res) => {
         const id = req.params.id
 
