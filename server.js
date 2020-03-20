@@ -1,8 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const port = process.env.PORT || 4000
-const mongoose = require('mongoose')
+const port = process.env.PORT
 const mongo = require('mongodb')
 const fs = require('fs')
 const generateUniqueId = require('generate-unique-id')
@@ -22,7 +21,7 @@ app
 require('dotenv').config(); // gegeven voor de mongodb server
 const url = process.env.DB_URL;
 
-mongo.MongoClient.connect(url, (err, database) => {
+mongo.MongoClient.connect(url,{useNewUrlParser: true, useUnifiedTopology: true} ,(err, database) => {
     if (err) {
         throw err
     } else {
@@ -31,7 +30,7 @@ mongo.MongoClient.connect(url, (err, database) => {
 })
 
 app
-    .get('/', (req, res) => res.render('./index.html', {
+    .get('/', (req, res) => res.render('form.ejs', {
         data: results
     }))
     .get('/funky-shirt/:id', (req, res) => {
