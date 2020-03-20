@@ -1,13 +1,14 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const port = process.env.PORT
 const mongo = require('mongodb')
-const fs = require('fs')
 const generateUniqueId = require('generate-unique-id')
 
+require('dotenv').config();
+
 let db = null
-const dbName = process.env.DB_Name
+const port = process.env.PORT
+const dbName = process.env.DB_NAME
 
 app
     .use(express.static(path.join(__dirname, 'public')))
@@ -18,7 +19,6 @@ app
     .set('view engine', 'ejs')
     .set('views', 'views')
 
-require('dotenv').config(); // gegeven voor de mongodb server
 const url = process.env.DB_URL;
 
 mongo.MongoClient.connect(url,{useNewUrlParser: true, useUnifiedTopology: true} ,(err, database) => {
