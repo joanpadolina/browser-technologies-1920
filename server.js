@@ -10,24 +10,27 @@ let db = null
 const port = process.env.PORT
 const dbName = process.env.DB_NAME
 
-app
-    .use(express.static('public'))
-    .use(express.urlencoded({
-        extended: true
-    }))
-    .use(express.json())
-    .set('view engine', 'ejs')
-    .set('views', 'views')
-
 const url = process.env.DB_URL;
 
-mongo.MongoClient.connect(url,{useNewUrlParser: true, useUnifiedTopology: true} ,(err, database) => {
+mongo.MongoClient.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}, (err, database) => {
     if (err) {
         throw err
     } else {
         db = database.db(dbName)
     }
 })
+
+
+app
+    .use(express.urlencoded({
+        extended: true
+    }))
+    .use(express.static('public'))
+    .set('view engine', 'ejs')
+    .set('views', 'views')
 
 app
     .get('/', (req, res) => res.render('form.ejs'))
@@ -82,19 +85,22 @@ app
     .post('/form/:id', (req, res) => {
         const id = req.params.id;
         console.log(id)
-		db.collection('userinput').update({
-            _id: mongo.ObjectID(id)},
-                { $set: {
+        db.collection('userinput').update({
+                _id: mongo.ObjectID(id)
+            }, {
+                $set: {
                     gender: req.body.gender,
                     text: req.body.textshirt,
                     colorshirt: req.body.colorshirt,
                     colortext: req.body.colortext,
                     type: req.body.typeshirt,
-                }},    
-                { upsert: true },
+                }
+            }, {
+                upsert: true
+            },
             done);
 
-        function done (error, result) {
+        function done(error, result) {
             if (error) return console.log(error);
             res.redirect('/funky-shirt/' + id)
         }
@@ -103,12 +109,14 @@ app
         const id = req.params.id;
 
         db.collection('userinput').findOne({
-			_id: mongo.ObjectID(id)
+            _id: mongo.ObjectID(id)
         }, done);
 
-        function done (error, results) {
+        function done(error, results) {
             if (error) return console.log(error);
-            res.render('/funky-shirt/' + results._id, { data: results })
+            res.render('/funky-shirt/' + results._id, {
+                data: results
+            })
         }
     })
 
