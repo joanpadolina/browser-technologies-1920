@@ -1,11 +1,23 @@
 <%- include('partials/head.ejs')  %>
 
-<h1>Bomb-ass-Design</h1>
+<section>
+    <h1>Bomb-ass-Design</h1>
 
-<p>
-    Create your own custom shirt.
-    Design from scratch.
-</p>
+    <p>
+        Create your own custom shirt.
+        Design from scratch.
+    </p>
+    <span>or..</span>
+    <p>
+        Finish your design with the given pin
+    </p>
+    <form action="/getOld" method="GET">
+        <input type="text" name="search">
+        <input type="submit" value="search">
+    </form>
+    
+</section>
+
 
 <section>
     <h2>
@@ -29,7 +41,6 @@
     </svg>
 
 </div>
-
 
 <form id="tshirtdesigning" action="/form" method="POST">
     <fieldset>

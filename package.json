@@ -7,9 +7,14 @@
     "doc": "docs"
   },
   "scripts": {
+    "prestart": "npm run dev",
+    "poststart": "npm run scss",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build":"npm run dev & npm run scss",
+    "scss": "node-sass --include-path scss public/scss/styling.scss public/css/styling.css",
+    "watch-scss":"nodemon -e scss -x \"npm run scss\""
   },
   "repository": {
     "type": "git",
@@ -34,6 +39,7 @@
     "generate-unique-id": "^2.0.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.5",
+    "node-sass": "^4.13.1",
     "path": "^0.12.7"
   }
 }

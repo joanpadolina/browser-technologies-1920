@@ -10,10 +10,18 @@
         Just enter the following in the searchbar: <span><%= data.pin  %> </span>
     </p>
 </article>
-<img src="/img/shirt.svg" width="300px" alt="<%= data.colorshirt  %> <%= data.typeshirt  %> ">
+<div class="svg-shirt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" viewBox="0 0 707 685">
+        <path fill="#A8A8A8" fill-rule="evenodd"
+            d="M426.85127,178.037247 C445.719023,190.584026 471.611556,198.297119 504.528869,201.176526 C537.446181,204.055933 564.499551,196.34284 585.688979,178.037247 C599.729685,184.690204 613.796951,190.209991 627.890775,194.596605 C649.031511,201.176526 689.576708,209.818068 700.48238,217.516775 C711.388052,225.215482 754.974221,266.344971 792.933263,319.751224 C830.892305,373.157478 866.849484,418.1413 866.849484,418.1413 C866.849484,418.1413 833.89012,446.250379 767.971392,502.468537 L700.48238,442.894022 L709.200278,858.514656 C592.182362,854.58618 526.448936,854.58618 512,858.514656 C490.326596,864.407371 344.622172,864.254658 328.149129,858.514656 C311.676087,852.774654 323.209209,694.46812 323.209209,684.023905 C323.209209,677.061096 324.855849,594.85745 328.149129,437.412967 L263.050402,502.468537 L160.258219,418.1413 C200.881985,366.980364 226.18912,334.183672 236.179623,319.751224 C251.165377,298.102553 293.795433,243.481238 312.947585,224.302526 C331.401465,215.865708 369.36936,200.443948 426.85127,178.037247 Z"
+            transform="translate(-160 -178)" />
+    </svg>
+
+</div>
 <article>
     <p>
-        You have created your own <span><%= data.colorshirt  %></span> colored <span><%= data.type  %></span> in <span><%= data.gender  %> </span> size.
+        You have created your own <span><%= data.colorshirt  %></span> colored <span><%= data.type  %></span> in
+        <span><%= data.gender  %> </span> size.
         On your <span><%= data.type  %></span> you have written "<span><%= data.text  %></span>" in the color
         <span><%= data.colortext  %></span>!
     </p>
@@ -39,7 +47,7 @@
         <legend>The shirt</legend>
         <div>
             <label for="text-shirt">Fill in your text</label>
-            <input type="text" name="textshirt" id="text-shirt" placeholder="<%= data.text  %>" >
+            <input type="text" name="textshirt" id="text-shirt" placeholder="<%= data.text  %>">
         </div>
         <div>
             <legend>Color shirt</legend>

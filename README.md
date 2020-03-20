@@ -16,8 +16,10 @@ In this course there is a lot of research about how the browser respond to desig
 1. [Concept case: 2 T-shirt](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design) [wiki]
 1. [Installation](#installation) 
 1. [Data](#data)
+1. [Main feaure research](#feature-research)
 1. [Layers](#layers)
 1. [Tools](#tools)
+1. [Feedback request](#feedback-request)
 1. [Credits](#credits)
 
 <img src="readme assets/sketch 1.jpeg">
@@ -76,6 +78,21 @@ colortext: "Black"
 type: "Long-sleeve"
 
 ```
+## Feature research
+
+This case is mainly interactive trough a form. Users can customize their shirt by adding text or selecting different colors.
+
+The following list are things used for the application to work with or without javascript. With some research on compatibility.
+
+[list comes here]
+__CSS__
+
+* @print 
+* :Psuedo classes
+
+
+__Javascript__
+
 
 # Layers
 
@@ -99,6 +116,13 @@ Lastly, when the user, for whatever reason, cannot proceed to print there is an 
 * Nodejs
 * Generate-unique-id
 * MongoDB (Compass)
+
+## Feedback request
+
+
+* Read Me
+What are the most important things to include in the read me?
+
 
 ## Credits
 * [Menno](https://github.com/Mennauu) // explained creating a json file through a server
