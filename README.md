@@ -121,7 +121,16 @@ Lastly, when the user, for whatever reason, cannot proceed to print there is an 
 
 
 * Read Me
+
 What are the most important things to include in the read me?
+
+* How do you begin with researching your feature
+
+I've been stuck with this subject because I focused on a working form which took more time then need. What is the best way to not get demotivated for this project. 
+
+* WIKI
+
+I'm not sure which content are important in the wiki? 
 
 
 ## Credits
