@@ -182,6 +182,10 @@ input[type="radio"]:checked+label {
     border: .3em solid black;
 }
 
+label>input[type="hero"]:checked {
+    background: red;
+}
+
 form fieldset:nth-of-type(3) input[type="text"] {
     border: none;
     height: 3em;
@@ -196,7 +200,7 @@ form fieldset:nth-of-type(3) input[type="text"] {
 
 div.heroes {
     img {
-        display:inline-block;
+        display: inline-block;
     }
 
     // label {
@@ -222,4 +226,76 @@ form fieldset:nth-of-type(4) {
 }
 
 // tshirt design itself
+div.svg-shirt-render {
+    width: 70em;
+    margin: auto;
+    display: flex;
 
+    svg {
+        width: 30em;
+
+        path {
+            // fill:white;
+        }
+    }
+
+    .shirticon {
+        position: relative;
+        right: 17.8em;
+        top: 7.5em;
+    }
+
+    h2 {
+        text-align: center;
+        right: 2em;
+        top: -2em;
+        position: relative;
+        width: 100%;
+    }
+
+    img {
+        width: 12.2em;
+        position: relative;
+        left: -3.2em;
+        top: -5em;
+    }
+}
+
+@media print{
+    body{
+        background:cadetblue;
+    }
+    div.svg-shirt-render{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 12em;
+        left: 7em;
+    }
+    div.svg-shirt-render .shirticon {
+        position: relative;
+        right: 21.8em;
+        top: 7.5em;
+    }
+    div.svg-shirt-render img {
+        width: 13.2em;
+        position: relative;
+        left: -3.2em;
+        top: -3em;
+    }
+    div.svg-shirt-render h2 {
+        text-align: center;
+        right: 1.5em;
+        top: -1.3em;
+        position: relative;
+        width: 100%;
+        font-size: 2em;
+    }
+    div.svg-shirt-render svg {
+        width: 37em;
+    }
+    
+    form, h1, article, ul{
+        display:none;
+    }
+}
