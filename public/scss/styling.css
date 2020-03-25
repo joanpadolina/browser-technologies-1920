@@ -1,3 +1,15 @@
+@font-face {
+  font-family: Avenger-outline;
+  src: url("../fonts/avengers/HeroesAssemble3DRegular-gz3p.otf"); }
+@font-face {
+  font-family: Avenger-bold;
+  src: url("../fonts/avengers/HeroesAssembleBoldExpanded-WELO.otf"); }
+@font-face {
+  font-family: Marvel;
+  src: url("../fonts/MarvelRegular-Dj83.ttf"); }
+@font-face {
+  font-family: Ragnarok;
+  src: url("../fonts/ThorRagnarok-xWEm.ttf"); }
 * {
   box-sizing: border-box; }
 
@@ -5,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: white;
+  background: cadetblue;
   box-sizing: border-box; }
 
 div.svg-shirt {
@@ -15,45 +27,124 @@ div.svg-shirt {
   margin: auto;
   margin-bottom: auto;
   margin-bottom: 3em;
-  border-radius: 0.7em;
-  box-shadow: 0px 35px 44px -3px #adadad; }
+  border-radius: 0.7em; }
 
-svg {
+section:nth-of-type(1) input[type="text"] {
+  border: 0.4em solid black;
+  width: 20em;
+  height: 3em;
+  border-radius: 2em;
+  outline: none;
+  font-size: 1em;
+  font-weight: 800;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  letter-spacing: 0.7em; }
+section:nth-of-type(1) input[type="submit"] {
+  height: 4.8em;
+  border-radius: 3.2em;
+  background: yellow;
+  border: 0.4em solid black;
+  font-weight: 800; }
+
+.svg-shirt svg {
   margin: auto;
   padding: 2em; }
+  .svg-shirt svg path {
+    fill: black; }
+
+section:nth-of-type(2) {
+  background: #f6db35;
+  padding: 1em;
+  width: 38.1em;
+  margin: 1.3em auto;
+  border: .5em solid black; }
+  section:nth-of-type(2) h2 {
+    text-align: center; }
+  section:nth-of-type(2) .steps {
+    display: flex;
+    justify-content: center; }
+    section:nth-of-type(2) .steps div {
+      margin: 1.5em;
+      text-align: center; }
+    section:nth-of-type(2) .steps svg {
+      width: 4em; }
+      section:nth-of-type(2) .steps svg path {
+        fill: black; }
+      section:nth-of-type(2) .steps svgpolygon {
+        fill: black; }
 
 fieldset {
   border: none;
   background: #d4d9de; }
 
-label {
-  display: block; }
-
 section:first-of-type {
   display: block;
   position: relative;
-  padding: 1em; }
+  text-align: center; }
 
-section:nth-of-type(2) h2 {
-  position: relative; }
-section:nth-of-type(2) ol li {
-  position: relative;
-  margin: auto; }
-section:nth-of-type(2) ol li:before {
-  content: "";
+h2 {
+  text-align: center; }
+
+h1 {
+  font-family: Avenger-outline;
+  font-size: 4em;
+  text-align: center; }
+
+form fieldset {
+  background: white;
+  margin: 1em;
+  width: 90vw;
+  border: 0.5em solid; }
+form legend {
+  color: white;
+  background: #ee5454;
+  width: 10em;
+  padding: 0.9em;
+  border: .3em solid black; }
+form label {
+  margin: 0.6em; }
+
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0; }
+
+label {
   display: inline-block;
-  position: relative;
+  background-color: #ddd;
+  padding: 10px 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px; }
+
+input[type="radio"]:checked + label {
+  border: .3em solid black; }
+
+form fieldset:nth-of-type(3) input[type="text"] {
+  border: none;
   height: 3em;
-  width: 3em;
-  object-fit: cover; }
-section:nth-of-type(2) ol li:nth-of-type(1) {
-  background: url("../img/svg/writ.svg") no-repeat;
-  background-size: 3em 3em; }
-section:nth-of-type(2) ol li:nth-of-type(2) {
-  background: url("../img/svg/custom.svg") no-repeat;
-  background-size: 3em 3em; }
-section:nth-of-type(2) ol li:nth-of-type(3) {
-  background: url("../img/svg/print.svg") no-repeat;
-  background-size: 3em 3em; }
+  width: 18em;
+  background: rebeccapurple;
+  color: white;
+  font-size: 1em;
+  padding-left: 1em;
+  outline-color: black; }
+
+div.heroes img {
+  display: inline-block; }
+
+form fieldset:nth-of-type(4) {
+  border: none;
+  background: none; }
+  form fieldset:nth-of-type(4) input {
+    border: none;
+    height: 2em;
+    width: 5em;
+    border-radius: 2em;
+    background: #f6db35;
+    font-size: 1em;
+    position: relative;
+    float: right;
+    margin-right: .9em; }
 
 /*# sourceMappingURL=styling.css.map */

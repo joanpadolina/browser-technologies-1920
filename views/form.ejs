@@ -1,122 +1,120 @@
-<%- include('partials/head.ejs')  %>
-
-<section>
-    <h1>Bomb-ass-Design</h1>
-
-    <p>
-        Create your own custom shirt.
-        Design from scratch.
-    </p>
-    <span>or..</span>
-    <p>
-        Finish your design with the given pin
-    </p>
-    <form action="/getOld" method="GET">
-        <input type="text" name="search">
-        <input type="submit" value="search">
-    </form>
-    
-</section>
-
-
-<section>
-    <h2>
-        Steps
-    </h2>
-    <ol>
-        <li>Fill in your text</li>
-        <li>Customize your shirt</li>
-        <li>Print!</li>
-    </ol>
-</section>
-
-<h2>
-    Begin designing your shirt!
-</h2>
-<div class="svg-shirt">
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" viewBox="0 0 707 685">
-        <path fill="#A8A8A8" fill-rule="evenodd"
-            d="M426.85127,178.037247 C445.719023,190.584026 471.611556,198.297119 504.528869,201.176526 C537.446181,204.055933 564.499551,196.34284 585.688979,178.037247 C599.729685,184.690204 613.796951,190.209991 627.890775,194.596605 C649.031511,201.176526 689.576708,209.818068 700.48238,217.516775 C711.388052,225.215482 754.974221,266.344971 792.933263,319.751224 C830.892305,373.157478 866.849484,418.1413 866.849484,418.1413 C866.849484,418.1413 833.89012,446.250379 767.971392,502.468537 L700.48238,442.894022 L709.200278,858.514656 C592.182362,854.58618 526.448936,854.58618 512,858.514656 C490.326596,864.407371 344.622172,864.254658 328.149129,858.514656 C311.676087,852.774654 323.209209,694.46812 323.209209,684.023905 C323.209209,677.061096 324.855849,594.85745 328.149129,437.412967 L263.050402,502.468537 L160.258219,418.1413 C200.881985,366.980364 226.18912,334.183672 236.179623,319.751224 C251.165377,298.102553 293.795433,243.481238 312.947585,224.302526 C331.401465,215.865708 369.36936,200.443948 426.85127,178.037247 Z"
-            transform="translate(-160 -178)" />
-    </svg>
-
-</div>
-
 <form id="tshirtdesigning" action="/form" method="POST">
     <fieldset>
         <legend>For who is this shirt?</legend>
+        <input type="radio" id="men" name="gender" value="Men">
+
         <label for="men">
-            <input type="radio" id="men" name="gender" value="Men">
             Straight no curves</label>
+        <input type="radio" id="woman" name="gender" value="Women">
+
         <label for="woman">
-            <input type="radio" id="woman" name="gender" value="Women">
             Need space for boobs</label>
     </fieldset>
     <fieldset>
         <legend>The shirt</legend>
+
         <div>
-            <label for="text-shirt">Fill in your text
-                <input type="text" name="textshirt" id="text-shirt">
-            </label>
-        </div>
-        <div>
-            <legend>Color shirt</legend>
+            <p>Color Shirt</p>
+
+            <input type="radio" id="blue" name="colorshirt" value="Blue">
 
             <label for="blue">
-                <input type="radio" id="blue" name="colorshirt" value="Blue">
                 Blue
             </label>
+            <input type="radio" id="red" name="colorshirt" value="Red">
 
             <label for="red">
-                <input type="radio" id="red" name="colorshirt" value="Red">
                 Red
             </label>
+            <input type="radio" id="yellow" name="colorshirt" value="Yellow">
 
             <label for="yellow">
-                <input type="radio" id="yellow" name="colorshirt" value="Yellow">
                 Yellow
             </label>
+
         </div>
+        <div>
+
+            <p>Type of shirt</p>
+            <input type="radio" name="typeshirt" value="T-Shirt" id="t-shirt">
+
+            <label for="t-shirt">
+                T-shirt
+            </label>
+            <input type="radio" name="typeshirt" value="Hoodie" id="hoodie">
+
+            <label for="hoodie">
+                Hoodie
+            </label>
+            <input type="radio" name="typeshirt" value="Long-sleeve" id="long-sleeve">
+
+            <label for="long-sleeve">
+                Long-sleeve
+            </label>
+
+        </div>
+
 
     </fieldset>
     <fieldset>
         <legend>Customize</legend>
         <div>
-            <legend>Color text</legend>
+            <p for="text-shirt">Fill in your text
+            </p>
+            <input type="text" name="textshirt" id="text-shirt">
 
-            <label for="black">
-                <input type="radio" id="black" name="colortext" value="Black">
-                Black
-            </label>
-
-            <label for="blue2">
-                <input type="radio" id="blue2" name="colortext" value="Blue">
-                Blue
-            </label>
-
-            <label for="white">
-                <input type="radio" id="white" name="colortext" value="White">
-                White
-            </label>
         </div>
         <div>
+            <p>Color Text</p>
+            <input type="radio" id="black" name="colortext" value="Black">
+            <label for="black">
+                Black
+            </label>
+            <input type="radio" id="blue2" name="colortext" value="Blue">
 
-            <legend>Type of shirt</legend>
+            <label for="blue2">
+                Blue
+            </label>
+            <input type="radio" id="white" name="colortext" value="White">
 
-            <label for="t-shirt">
-                <input type="radio" name="typeshirt" value="T-Shirt" id="t-shirt">
-                T-shirt
+            <label for="white">
+                White
             </label>
 
-            <label for="hoodie">
-                <input type="radio" name="typeshirt" value="Hoodie" id="hoodie">
-                Hoodie
+
+        </div>
+        <div class="heroes">
+            <p>Choose your hero</p>
+            <input type="radio" name="hero" id="avenger" value="Avenger">
+
+            <label for="avenger">
+                Avenger
+                <img src="/img/svg/icon/avenger.svg" width="35em" alt="">
+            </label>
+            <input type="radio" name="hero" id="ironman" value="Ironman">
+
+            <label for="ironman">
+                Ironman
+                <img src="/img/svg/icon/Icon.svg" width="40em" alt="">
+            </label>
+            <input type="radio" name="hero" id="captaina" value="Captain America">
+
+            <label for="captaina">
+                Captain America
+                <img src="/img/svg/icon/captain.svg" width="40em" alt="">
+            </label>
+            <input type="radio" name="hero" id="thor" value="Thor">
+            <label for="thor">
+                Thor
+                <img src="/img/svg/icon/thor.svg" width="40em" alt="">
+            </label>
+            <input type="radio" name="hero" id="thor" value="Spider Man">
+            <label for="thor">
+                Spider Man
+                <img src="/img/svg/icon/spider.svg" width="40em" alt="">
             </label>
 
-            <label for="long-sleeve">
-                <input type="radio" name="typeshirt" value="Long-sleeve" id="long-sleeve">
-                Long-sleeve
-            </label>
+
         </div>
     </fieldset>
 
@@ -125,5 +123,3 @@
         <input type="submit" value="print">
     </fieldset>
 </form>
-
-<%- include('partials/footer.ejs')  %>

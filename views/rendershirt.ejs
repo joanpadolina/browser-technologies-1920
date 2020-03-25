@@ -31,87 +31,8 @@
     <li><%= data.text  %> </li>
     <li>color shirt: <%= data.colorshirt  %></li>
     <li>color text: <%= data.colortext  %></li>
+    <li>your hero: <%= data.hero %> </li>
     <li><%= data.type  %></li>
 </ul>
-
-
-<form id="tshirtdesigning" action="/form/<%= data._id %> " method="POST">
-    <fieldset>
-        <legend>For who is this shirt?</legend>
-        <input type="radio" id="men" name="gender" value="Men">
-        <label for="men">Straight no curves</label>
-        <input type="radio" id="woman" name="gender" value="Women">
-        <label for="woman">Need space for boobs</label>
-    </fieldset>
-    <fieldset>
-        <legend>The shirt</legend>
-        <div>
-            <label for="text-shirt">Fill in your text</label>
-            <input type="text" name="textshirt" id="text-shirt" placeholder="<%= data.text  %>">
-        </div>
-        <div>
-            <legend>Color shirt</legend>
-
-            <label for="blue">
-                <input type="radio" id="blue" name="colorshirt" value="Blue">
-                Blue
-            </label>
-
-            <label for="red">
-                <input type="radio" id="red" name="colorshirt" value="Red">
-                Red
-            </label>
-
-            <label for="yellow">
-                <input type="radio" id="yellow" name="colorshirt" value="Yellow">
-                Yellow
-            </label>
-        </div>
-
-    </fieldset>
-    <fieldset>
-        <legend>Customize</legend>
-        <div>
-            <legend>Color text</legend>
-
-            <label for="black">
-                <input type="radio" id="black" name="colortext" value="Black">
-                Black
-            </label>
-
-            <label for="blue2">
-                <input type="radio" id="blue2" name="colortext" value="Blue">
-                Blue
-            </label>
-
-            <label for="white">
-                <input type="radio" id="white" name="colortext" value="White">
-                White
-            </label>
-        </div>
-        <div>
-
-            <legend>Type of shirt</legend>
-
-            <label for="t-shirt">
-                <input type="radio" name="typeshirt" value="T-Shirt" id="t-shirt">
-                T-shirt
-            </label>
-
-            <label for="hoodie">
-                <input type="radio" name="typeshirt" value="Hoodie" id="hoodie">
-                Hoodie
-            </label>
-
-            <label for="long-sleeve">
-                <input type="radio" name="typeshirt" value="Long-sleeve" id="long-sleeve">
-                Long-sleeve
-            </label>
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <input type="submit" name="update" value="update">
-    </fieldset>
-</form>
+<%- include('form.ejs') %>
 <%- include('partials/footer.ejs') %>

@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const path = require('path')
 const mongo = require('mongodb')
 const generateUniqueId = require('generate-unique-id')
 
@@ -33,7 +32,7 @@ app
     .set('views', 'views')
 
 app
-    .get('/', (req, res) => res.render('form.ejs'))
+    .get('/', (req, res) => res.render('index.ejs'))
     .get('/funky-shirt/:id', (req, res) => {
         const id = req.params.id
 
@@ -71,7 +70,8 @@ app
             text: req.body.textshirt,
             colorshirt: req.body.colorshirt,
             colortext: req.body.colortext,
-            type: req.body.typeshirt
+            type: req.body.typeshirt,
+            hero: req.body.hero
         }, done)
 
         function done(error, results) {
@@ -94,6 +94,7 @@ app
                     colorshirt: req.body.colorshirt,
                     colortext: req.body.colortext,
                     type: req.body.typeshirt,
+                    hero: req.body.hero
                 }
             }, {
                 upsert: true
