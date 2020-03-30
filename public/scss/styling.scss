@@ -176,37 +176,44 @@ input[type="radio"] {
     position: fixed;
     width: 0;
 }
-input[type="radio"] + label[for^=blue] {
+
+input[type="radio"]+label[for^=blue] {
     color: #ffffff;
     font-weight: bold;
     background: blue;
 }
-input[type="radio"] + label[for^=red] {
+
+input[type="radio"]+label[for^=red] {
     color: #ffffff;
     font-weight: bold;
     background: red;
 }
-input[type="radio"] + label[for^=yellow] {
+
+input[type="radio"]+label[for^=yellow] {
     color: black;
     font-weight: bold;
     background: yellow;
 }
-input[type="radio"] + label[for^=black] {
+
+input[type="radio"]+label[for^=black] {
     color: #ffffff;
     font-weight: bold;
     background: black;
 }
-input[type="radio"] + label[for^=white] {
+
+input[type="radio"]+label[for^=white] {
     color: black;
     font-weight: bold;
-    border:1px solid grey;
-    background:white;
+    border: 1px solid grey;
+    background: white;
 }
-input[type="radio"] + label[for^=green] {
+
+input[type="radio"]+label[for^=green] {
     color: white;
     font-weight: bold;
-    background:green;
+    background: green;
 }
+
 label {
     display: inline-block;
     background-color: #ddd;
@@ -254,11 +261,14 @@ form fieldset:nth-of-type(4) {
         height: 2em;
         width: auto;
         border-radius: 2em;
-        background: $yellow;
+        background: #b0d289;
         font-size: 1em;
-        position: relative;
-        float: right;
+        position: absolute;
+        top: 15em;
+        left: -28.3em;
         margin-right: .9em;
+        font-weight: 800;
+        color: #1c441c;
     }
 }
 
@@ -310,6 +320,7 @@ div.svg-shirt-render {
         // top: -5em;
     }
 }
+
 input[type="button"] {
     padding: 1em;
     font-size: 1em;
@@ -319,17 +330,19 @@ input[type="button"] {
     color: white;
     letter-spacing: 0.1em;
     border: white solid 0.2em;
-    position:relative;
-    display:block;
-    margin:auto;
+    position: relative;
+    display: block;
+    margin: auto;
     margin-bottom: 5em;
 }
-span{
-    font-size:1.2em;
-    font-weight:700;
-    background:yellow;
-    padding:.4em;
+
+span {
+    font-size: 1.2em;
+    font-weight: 700;
+    background: yellow;
+    padding: .4em;
 }
+
 div.svg-shirt-render .shirt-container {
     position: relative;
     margin: 2em auto -11em;
@@ -346,32 +359,45 @@ p {
 
 
 @media only screen and (min-width: 1280px) {
-    body {
-    //   background-color: red;
-    }
-    .container{
-        display:flex;
+
+    .container {
+        display: flex;
+
         fieldset {
             width: 37vw;
         }
+
         form {
             display: block;
-            top: 13em;
             width: 50%;
+            // height: 41em;
+            // overflow: scroll;
         }
+        // fieldset:nth-of-type(3) {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 5em;
+        // }
     }
-    div.first-form{
-        form{
-            display:flex;
-        }
-        fieldset{
-            width:37em
-        }
-    }
-    
-  }
-  ul{
-      display:none;
-  }
 
-  @import 'print.scss';
+    div.first-form {
+        form {
+            display: flex;
+        }
+
+        fieldset {
+            width: 37em
+        }
+    }
+
+
+
+}
+
+
+
+ul {
+    display: none;
+}
+
+@import 'print.scss';

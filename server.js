@@ -33,20 +33,6 @@ app
 
 app
     .get('/', (req, res) => res.render('index.ejs'))
-    .get('/funky-shirt/:id', (req, res) => {
-        const id = req.params.id
-
-        db.collection('userinput').findOne({
-            _id: mongo.ObjectID(id)
-        }, done)
-
-        function done(err, results) {
-            if (err) return console.log(results)
-            res.render('rendershirt.ejs', {
-                data: results
-            })
-        }
-    })
     .get('/getOld', (req, res) => {
         let pin = Number(req.query.search)
 
@@ -81,11 +67,22 @@ app
         }
 
     })
+    .get('/funky-shirt/:id', (req, res) => {
+        const id = req.params.id
+        db.collection('userinput').findOne({
+            _id: mongo.ObjectID(id)
+        }, done)
 
+        function done(err, results) {
+            if (err) return console.log(results)
+            res.render('rendershirt.ejs', {
+                data: results
+            })
+        }
+    })
     .post('/form/:id', (req, res) => {
         const id = req.params.id;
-        console.log(id)
-        db.collection('userinput').update({
+        db.collection('userinput').updateOne({
                 _id: mongo.ObjectID(id)
             }, {
                 $set: {
@@ -102,23 +99,23 @@ app
             done);
 
         function done(error, result) {
-            if (error) return console.log(error);
+            if (error) return console.log(error)
             res.redirect('/funky-shirt/' + id)
         }
     })
-    .get('/form/:id', (req, res) => {
-        const id = req.params.id;
+// .get('/form/:id', (req, res) => {
+//     const id = req.params.id;
 
-        db.collection('userinput').findOne({
-            _id: mongo.ObjectID(id)
-        }, done);
+//     db.collection('userinput').findOne({
+//         _id: mongo.ObjectID(id)
+//     }, done);
 
-        function done(error, results) {
-            if (error) return console.log(error);
-            res.render('/funky-shirt/' + results._id, {
-                data: results
-            })
-        }
-    })
+//     function done(error, results) {
+//         if (error) return console.log(error);
+//         res.render('/funky-shirt/' + results.id, {
+//             data: results
+//         })
+//     }
+// })
 
 app.listen(port)

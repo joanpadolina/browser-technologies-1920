@@ -181,11 +181,14 @@ form fieldset:nth-of-type(4) {
     height: 2em;
     width: auto;
     border-radius: 2em;
-    background: #f6db35;
+    background: #b0d289;
     font-size: 1em;
-    position: relative;
-    float: right;
-    margin-right: .9em; }
+    position: absolute;
+    top: 15em;
+    left: -28.3em;
+    margin-right: .9em;
+    font-weight: 800;
+    color: #1c441c; }
 
 div.svg-shirt-render {
   margin: auto;
@@ -252,7 +255,6 @@ p {
       width: 37vw; }
     .container form {
       display: block;
-      top: 13em;
       width: 50%; }
 
   div.first-form form {

@@ -33,6 +33,8 @@ for(const item of colorText){
 
 //change icon 
 const iconSet = document.getElementsByName('hero')
+const iconLabel = document.querySelectorAll('input[name=hero]')
+console.log(iconLabel.label)
 const iconPlace = document.querySelector('.icon')
 for(const item of iconSet){
     item.addEventListener('change', () => {

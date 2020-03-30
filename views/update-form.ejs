@@ -1,0 +1,156 @@
+<form id="tshirtdesigning" action="/form/<%= data._id %>" method="POST">
+    <fieldset>
+        <legend>For who is this shirt?</legend>
+        <input type="radio" id="men" name="gender" value="Men">
+
+        <label for="men">
+            Straight no curves</label>
+        <input type="radio" id="woman" name="gender" value="Women">
+
+        <label for="woman">
+            Need space for boobs</label>
+    </fieldset>
+    <fieldset>
+        <legend>The shirt</legend>
+
+        <div>
+            <p>Color Shirt</p>
+
+            <input type="radio" id="blue" name="colorshirt" value="Blue" alt="blue">
+
+            <label for="blue">
+                America Blue
+            </label>
+            <input type="radio" id="red" name="colorshirt" value="Red" alt="red">
+
+            <label for="red">
+                Iron Red
+            </label>
+            <input type="radio" id="yellow" name="colorshirt" value="Yellow" alt="yellow">
+
+            <label for="yellow">
+                Yellow Thunder
+            </label>
+            <input type="radio" id="green" name="colorshirt" value="Green" alt="green">
+
+            <label for="green">
+                Hulk Green
+            </label>
+            <input type="radio" id="black" name="colorshirt" value="Black" alt="black">
+
+            <label for="black">
+                Black Widow
+            </label>
+            <input type="radio" id="white" name="colorshirt" value="White" alt="white">
+
+            <label for="white">
+                Stormy White
+            </label>
+
+        </div>
+        <div>
+
+            <p>Type of shirt</p>
+            <input type="radio" name="typeshirt" value="T-Shirt" id="t-shirt">
+
+            <label for="t-shirt">
+                T-shirt
+            </label>
+            <input type="radio" name="typeshirt" value="Hoodie" id="hoodie">
+
+            <label for="hoodie">
+                Hoodie
+            </label>
+            <input type="radio" name="typeshirt" value="Long-sleeve" id="long-sleeve">
+
+            <label for="long-sleeve">
+                Long-sleeve
+            </label>
+
+        </div>
+
+
+    </fieldset>
+    <fieldset>
+        <legend>Customize</legend>
+        <div>
+            <p for="text-shirt">Fill in your text
+            </p>
+            <input type="text" name="textshirt" id="text-shirt" value="text here">
+
+        </div>
+        <div>
+            <p>Color Text</p>
+            <input type="radio" id="blue2" name="colortext" value="Blue" alt="blue2">
+
+            <label for="blue2">
+                America Blue
+            </label>
+            <input type="radio" id="red2" name="colortext" value="Red" alt="red2">
+
+            <label for="red2">
+                Iron Red
+            </label>
+            <input type="radio" id="yellow2" name="colortext" value="Yellow" alt="yellow2">
+
+            <label for="yellow2">
+                Yellow Thunder
+            </label>
+            <input type="radio" id="green2" name="colortext" value="Green" alt="green2">
+
+            <label for="green2">
+                Hulk Green
+            </label>
+            <input type="radio" id="black2" name="colortext" value="Black" alt="black2">
+
+            <label for="black2">
+                Black Widow
+            </label>
+            <input type="radio" id="white2" name="colortext" value="White" alt="white2">
+
+            <label for="white2">
+                Stormy White
+            </label>
+
+
+        </div>
+        <div class="heroes">
+            <p>Choose your hero</p>
+            <input type="radio" name="hero" id="avenger" value="avenger">
+
+            <label for="avenger">
+                Avenger
+                <img src="/img/svg/icon/avenger.svg" width="35em" alt="">
+            </label>
+            <input type="radio" name="hero" id="ironman" value="ironman">
+
+            <label for="ironman">
+                Ironman
+                <img src="/img/svg/icon/ironman.svg" width="40em" alt="">
+            </label>
+            <input type="radio" name="hero" id="captaina" value="captain">
+
+            <label for="captaina">
+                Captain America
+                <img src="/img/svg/icon/captain.svg" width="40em" alt="">
+            </label>
+            <input type="radio" name="hero" id="thor" value="Thor">
+            <label for="thor">
+                Thor
+                <img src="/img/svg/icon/thor.svg" width="40em" alt="">
+            </label>
+            </label>
+            <input type="radio" name="hero" id="spider" value="spider">
+            <label for="spider">
+                Spider Man
+                <img src="/img/svg/icon/spider.svg" width="40em" alt="">
+            </label>
+
+
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <input type="submit" value="Update worthy shirt">
+    </fieldset>
+</form>
