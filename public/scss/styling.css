@@ -91,24 +91,56 @@ h1 {
   font-size: 4em;
   text-align: center; }
 
-form fieldset {
-  background: white;
-  margin: 1em;
-  width: 90vw;
-  border: 0.5em solid; }
-form legend {
-  color: white;
-  background: #ee5454;
-  width: 10em;
-  padding: 0.9em;
-  border: .3em solid black; }
-form label {
-  margin: 0.6em; }
+form {
+  width: 100%;
+  display: block;
+  margin: auto;
+  position: relative;
+  text-align: -webkit-center; }
+  form fieldset {
+    background: white;
+    margin: 1em;
+    width: 90vw;
+    border: 0.5em solid; }
+  form legend {
+    color: white;
+    background: #ee5454;
+    width: 10em;
+    padding: 0.9em;
+    border: .3em solid black; }
+  form label {
+    margin: 0.6em; }
 
 input[type="radio"] {
   opacity: 0;
   position: fixed;
   width: 0; }
+
+input[type="radio"] + label[for^=blue] {
+  color: #ffffff;
+  font-weight: bold;
+  background: blue; }
+
+input[type="radio"] + label[for^=red] {
+  color: #ffffff;
+  font-weight: bold;
+  background: red; }
+
+input[type="radio"] + label[for^=yellow] {
+  color: black;
+  font-weight: bold;
+  background: yellow; }
+
+input[type="radio"] + label[for^=black] {
+  color: #ffffff;
+  font-weight: bold;
+  background: black; }
+
+input[type="radio"] + label[for^=white] {
+  color: black;
+  font-weight: bold;
+  border: 1px solid grey;
+  background: white; }
 
 label {
   display: inline-block;
@@ -142,7 +174,7 @@ form fieldset:nth-of-type(4) {
   form fieldset:nth-of-type(4) input {
     border: none;
     height: 2em;
-    width: 5em;
+    width: auto;
     border-radius: 2em;
     background: #f6db35;
     font-size: 1em;
@@ -151,61 +183,78 @@ form fieldset:nth-of-type(4) {
     margin-right: .9em; }
 
 div.svg-shirt-render {
-  width: 70em;
   margin: auto;
-  display: flex; }
+  display: block;
+  position: relative; }
+  div.svg-shirt-render .shirt-container {
+    position: relative;
+    margin: auto;
+    width: 31em;
+    margin-bottom: -12em; }
   div.svg-shirt-render svg {
     width: 30em; }
   div.svg-shirt-render .shirticon {
+    width: 17em;
+    display: block;
     position: relative;
-    right: 17.8em;
-    top: 7.5em; }
-  div.svg-shirt-render h2 {
     text-align: center;
-    right: 2em;
-    top: -2em;
-    position: relative;
-    width: 100%; }
-  div.svg-shirt-render img {
-    width: 12.2em;
-    position: relative;
-    left: -3.2em;
-    top: -5em; }
-
-@media print {
-  body {
-    background: cadetblue; }
-
-  div.svg-shirt-render {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    top: 12em;
-    left: 7em; }
-
-  div.svg-shirt-render .shirticon {
-    position: relative;
-    right: 21.8em;
-    top: 7.5em; }
-
-  div.svg-shirt-render img {
-    width: 13.2em;
-    position: relative;
-    left: -3.2em;
-    top: -3em; }
-
+    top: -26em;
+    left: 6.3em; }
   div.svg-shirt-render h2 {
-    text-align: center;
-    right: 1.5em;
-    top: -1.3em;
+    margin: auto;
     position: relative;
-    width: 100%;
-    font-size: 2em; }
+    top: 1em;
+    width: 8em;
+    overflow-wrap: break-word; }
+  div.svg-shirt-render img {
+    width: 12.2em; }
 
-  div.svg-shirt-render svg {
-    width: 37em; }
+input[type="button"] {
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 0.4em;
+  font-weight: 700;
+  background: #d52948;
+  color: white;
+  letter-spacing: 0.1em;
+  border: white solid 0.2em;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-bottom: 5em; }
 
-  form, h1, article, ul {
-    display: none; } }
+span {
+  font-size: 1.2em;
+  font-weight: 700;
+  background: yellow;
+  padding: .4em; }
+
+div.svg-shirt-render .shirt-container {
+  position: relative;
+  margin: 2em auto -11em;
+  width: 31em; }
+
+p {
+  width: 27em;
+  text-align: center;
+  line-height: 3em;
+  margin: auto; }
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    display: flex; }
+    .container fieldset {
+      width: 37vw; }
+    .container form {
+      display: block;
+      top: 13em;
+      width: 50%; }
+
+  div.first-form form {
+    display: flex; }
+  div.first-form fieldset {
+    width: 37em; } }
+ul {
+  display: none; }
 
 /*# sourceMappingURL=styling.css.map */

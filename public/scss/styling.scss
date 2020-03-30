@@ -120,6 +120,7 @@ section:nth-of-type(2) {
     }
 }
 
+
 fieldset {
     border: none;
     background: #d4d9de;
@@ -143,6 +144,12 @@ h1 {
 }
 
 form {
+    width: 100%;
+    display: block;
+    margin: auto;
+    position: relative;
+    text-align: -webkit-center;
+
     fieldset {
         background: white;
         margin: 1em;
@@ -169,7 +176,32 @@ input[type="radio"] {
     position: fixed;
     width: 0;
 }
-
+input[type="radio"] + label[for^=blue] {
+    color: #ffffff;
+    font-weight: bold;
+    background: blue;
+}
+input[type="radio"] + label[for^=red] {
+    color: #ffffff;
+    font-weight: bold;
+    background: red;
+}
+input[type="radio"] + label[for^=yellow] {
+    color: black;
+    font-weight: bold;
+    background: yellow;
+}
+input[type="radio"] + label[for^=black] {
+    color: #ffffff;
+    font-weight: bold;
+    background: black;
+}
+input[type="radio"] + label[for^=white] {
+    color: black;
+    font-weight: bold;
+    border:1px solid grey;
+    background:white;
+}
 label {
     display: inline-block;
     background-color: #ddd;
@@ -215,7 +247,7 @@ form fieldset:nth-of-type(4) {
     input {
         border: none;
         height: 2em;
-        width: 5em;
+        width: auto;
         border-radius: 2em;
         background: $yellow;
         font-size: 1em;
@@ -227,75 +259,112 @@ form fieldset:nth-of-type(4) {
 
 // tshirt design itself
 div.svg-shirt-render {
-    width: 70em;
     margin: auto;
-    display: flex;
+    display: block;
+    position: relative;
+
+    .shirt-container {
+        position: relative;
+        margin: auto;
+        width: 31em;
+        margin-bottom: -12em;
+    }
 
     svg {
         width: 30em;
-
-        path {
-            // fill:white;
-        }
     }
 
     .shirticon {
+        // position: relative;
+        // right: 17.8em;
+        // top: 7.5em;
+        width: 17em;
+        display: block;
         position: relative;
-        right: 17.8em;
-        top: 7.5em;
+        text-align: center;
+        top: -26em;
+        left: 6.3em;
     }
 
     h2 {
-        text-align: center;
-        right: 2em;
-        top: -2em;
+        // right: 2em;
+        // top: -2em;
+        // position: relative;
+        // width: 100%;
+        margin: auto;
         position: relative;
-        width: 100%;
+        top: 1em;
+        width: 8em;
+        overflow-wrap: break-word;
     }
 
     img {
         width: 12.2em;
-        position: relative;
-        left: -3.2em;
-        top: -5em;
+        // position: relative;
+        // left: -3.2em;
+        // top: -5em;
     }
+}
+input[type="button"] {
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 0.4em;
+    font-weight: 700;
+    background: #d52948;
+    color: white;
+    letter-spacing: 0.1em;
+    border: white solid 0.2em;
+    position:relative;
+    display:block;
+    margin:auto;
+    margin-bottom: 5em;
+}
+span{
+    font-size:1.2em;
+    font-weight:700;
+    background:yellow;
+    padding:.4em;
+}
+div.svg-shirt-render .shirt-container {
+    position: relative;
+    margin: 2em auto -11em;
+    width: 31em;
 }
 
-@media print{
-    body{
-        background:cadetblue;
+p {
+    width: 27em;
+    text-align: center;
+    line-height: 3em;
+    margin: auto;
+}
+
+
+
+@media only screen and (min-width: 1280px) {
+    body {
+    //   background-color: red;
     }
-    div.svg-shirt-render{
-        position: relative;
-        height: 100%;
-        width: 100%;
-        top: 12em;
-        left: 7em;
+    .container{
+        display:flex;
+        fieldset {
+            width: 37vw;
+        }
+        form {
+            display: block;
+            top: 13em;
+            width: 50%;
+        }
     }
-    div.svg-shirt-render .shirticon {
-        position: relative;
-        right: 21.8em;
-        top: 7.5em;
-    }
-    div.svg-shirt-render img {
-        width: 13.2em;
-        position: relative;
-        left: -3.2em;
-        top: -3em;
-    }
-    div.svg-shirt-render h2 {
-        text-align: center;
-        right: 1.5em;
-        top: -1.3em;
-        position: relative;
-        width: 100%;
-        font-size: 2em;
-    }
-    div.svg-shirt-render svg {
-        width: 37em;
+    div.first-form{
+        form{
+            display:flex;
+        }
+        fieldset{
+            width:37em
+        }
     }
     
-    form, h1, article, ul{
-        display:none;
-    }
-}
+  }
+  ul{
+      display:none;
+  }
