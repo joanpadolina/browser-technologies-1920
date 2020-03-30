@@ -202,6 +202,11 @@ input[type="radio"] + label[for^=white] {
     border:1px solid grey;
     background:white;
 }
+input[type="radio"] + label[for^=green] {
+    color: white;
+    font-weight: bold;
+    background:green;
+}
 label {
     display: inline-block;
     background-color: #ddd;
@@ -368,3 +373,5 @@ p {
   ul{
       display:none;
   }
+
+  @import 'print.scss';

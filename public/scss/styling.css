@@ -142,6 +142,11 @@ input[type="radio"] + label[for^=white] {
   border: 1px solid grey;
   background: white; }
 
+input[type="radio"] + label[for^=green] {
+  color: white;
+  font-weight: bold;
+  background: green; }
+
 label {
   display: inline-block;
   background-color: #ddd;
@@ -256,5 +261,24 @@ p {
     width: 37em; } }
 ul {
   display: none; }
+
+@media print {
+  body {
+    background: cadetblue; }
+
+  div.svg-shirt-render .shirt-container {
+    position: relative;
+    margin: auto;
+    width: 31em;
+    top: 9em; }
+
+  form,
+  h1,
+  article,
+  ul, input {
+    display: none; }
+
+  input[type="button"] {
+    display: none; } }
 
 /*# sourceMappingURL=styling.css.map */
