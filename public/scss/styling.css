@@ -92,7 +92,6 @@ h1 {
   text-align: center; }
 
 form {
-  width: 100%;
   display: block;
   margin: auto;
   position: relative;
@@ -291,8 +290,11 @@ p {
       width: 50%;
       float: right; }
 
-  div.first-form fieldset {
-    width: 37em; } }
+  div.first-form {
+    width: 100vw;
+    display: flex; }
+    div.first-form fieldset {
+      width: 37em; } }
 input[type="text"]:hover {
   width: 40em; }
 
@@ -327,7 +329,7 @@ label:hover {
   form,
   h1,
   article,
-  ul, input {
+  ul, input, p {
     display: none; }
 
   input[type="button"] {

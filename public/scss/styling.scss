@@ -144,7 +144,6 @@ h1 {
 }
 
 form {
-    width: 100%;
     display: block;
     margin: auto;
     position: relative;
@@ -421,7 +420,9 @@ p {
     }
 
     div.first-form {
-
+            width: 100vw;
+            display: flex;
+        
         fieldset {
             width: 37em
         }
