@@ -14,11 +14,10 @@ In this course there is a lot of research about how the browser respond to desig
 
 ## Project 🎨 
 1. [Concept case: 2 T-shirt](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design) [wiki]
-1. [Installation](#installation) 
-1. [Data](#data)
-1. [Concept(wiki)](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design)
 1. [Layers(wiki)](https://github.com/joanpadolina/browser-technologies-1920/wiki/Layering)
 1. [Support(wiki)](https://github.com/joanpadolina/browser-technologies-1920/wiki/Support)
+1. [Installation](#installation) 
+1. [Data](#data)
 1. [Tools](#tools)
 1. [Feedback request](#feedback-request)
 1. [Credits](#credits)
