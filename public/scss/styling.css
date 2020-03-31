@@ -102,8 +102,8 @@ form {
     width: 90vw;
     border: 0.5em solid; }
   form legend {
-    color: white;
-    background: #ee5454;
+    color: black;
+    background: #fb9898;
     width: 10em;
     padding: 0.9em;
     border: .3em solid black;
@@ -118,24 +118,24 @@ input[type="radio"] {
   width: 0; }
 
 input[type="radio"] + label[for^=blue] {
-  color: #ffffff;
+  color: black;
   font-weight: bold;
-  background: blue; }
+  background: rgba(0, 0, 255, 0.171); }
 
 input[type="radio"] + label[for^=red] {
-  color: #ffffff;
+  color: black;
   font-weight: bold;
-  background: red; }
+  background: rgba(255, 0, 0, 0.116); }
 
 input[type="radio"] + label[for^=yellow] {
   color: black;
   font-weight: bold;
-  background: yellow; }
+  background: rgba(255, 255, 0, 0.151); }
 
 input[type="radio"] + label[for^=black] {
-  color: #ffffff;
+  color: black;
   font-weight: bold;
-  background: black; }
+  background: rgba(0, 0, 0, 0.24); }
 
 input[type="radio"] + label[for^=white] {
   color: black;
@@ -144,9 +144,9 @@ input[type="radio"] + label[for^=white] {
   background: white; }
 
 input[type="radio"] + label[for^=green] {
-  color: white;
+  color: black;
   font-weight: bold;
-  background: green; }
+  background: rgba(0, 128, 0, 0.137); }
 
 label {
   display: inline-block;
@@ -176,7 +176,7 @@ form fieldset:nth-of-type(3) input[type="text"] {
   text-align: center; }
   form fieldset:nth-of-type(3) input[type="text"]:focus {
     background: #7eda81;
-    width: 23em;
+    width: 20em;
     outline: none; }
 
 div.heroes img {
@@ -316,6 +316,10 @@ label:hover {
   opacity: 1;
   transform: rotate(2deg); }
 
+@supports (-webkit-text-stroke: 1px black) {
+  label, legend {
+    -webkit-text-stroke: .1px white;
+    -webkit-text-fill-color: black; } }
 @media print {
   body {
     background: cadetblue; }
