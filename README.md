@@ -16,8 +16,9 @@ In this course there is a lot of research about how the browser respond to desig
 1. [Concept case: 2 T-shirt](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design) [wiki]
 1. [Installation](#installation) 
 1. [Data](#data)
-1. [Main feaure research](#feature-research)
-1. [Layers](#layers)
+1. [Concept(wiki)](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design)
+1. [Layers(wiki)](https://github.com/joanpadolina/browser-technologies-1920/wiki/Layering)
+1. [Support(wiki)](https://github.com/joanpadolina/browser-technologies-1920/wiki/Support)
 1. [Tools](#tools)
 1. [Feedback request](#feedback-request)
 1. [Credits](#credits)
@@ -78,39 +79,6 @@ colortext: "Black"
 type: "Long-sleeve"
 
 ```
-## Feature research
-
-This case is mainly interactive trough a form. Users can customize their shirt by adding text or selecting different colors.
-
-The following list are things used for the application to work with or without javascript. With some research on compatibility.
-
-[list comes here]
-__CSS__
-
-* @print 
-* :Psuedo classes
-
-
-__Javascript__
-
-
-# Layers
-
-
-## HTML-only
-
-*first test, for the sketches please read it in the [wiki](https://github.com/joanpadolina/browser-technologies-1920/wiki/Concept-case-2:-T-shirt-Design)* 
-
-__Form Post__
-In the first layer the focus was mainly on making the form work. This has been possible through rendering it server-sided. The data would then be added to a database, in this case to Mongo DB.
-
-<img src="readme assets/screens/html_mongodb.gif">
-
-__Update__
-In the first setup the data is sent but also render with a templating tool. In the second screen user can interact with their data by updating if necessary.
-
-__Search__
-Lastly, when the user, for whatever reason, cannot proceed to print there is an option to retrieve data the have sended. The form adds an extra code which gives the user an unique **id** which they layer can fill in the searchbar. This way they are able to customize, save and print their desired shirt.
 
 ## Tools
 
