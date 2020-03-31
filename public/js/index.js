@@ -1,7 +1,7 @@
 console.log('yo')
 // changing text live update
 const h2 = document.querySelector('.live-update')
-h2.contentEditable = "true";
+// h2.contentEditable = "true";
 const text = document.querySelector('input[type="text"]')
 
 text.addEventListener('input', () => {

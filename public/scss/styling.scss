@@ -148,7 +148,7 @@ form {
     display: block;
     margin: auto;
     position: relative;
-    text-align: -webkit-center;
+    text-align: center;
 
     fieldset {
         background: white;
@@ -163,6 +163,8 @@ form {
         width: 10em;
         padding: 0.9em;
         border: .3em solid black;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     label {
@@ -220,6 +222,8 @@ label {
     padding: 10px 20px;
     font-family: sans-serif, Arial;
     font-size: 16px;
+    opacity: .8;
+    transition:300ms ease;
 }
 
 input[type="radio"]:checked+label {
@@ -234,22 +238,25 @@ form fieldset:nth-of-type(3) input[type="text"] {
     border: none;
     height: 3em;
     width: 18em;
-    background: rebeccapurple;
-    color: white;
+    background: #b2dcb0;
+    color: black;
     font-size: 1em;
     padding-left: 1em;
     outline-color: black;
+    transition: 200ms ease;
+    text-align: center;
 
+    &:focus {
+        background: #7eda81;
+        width: 23em;
+        outline: none;
+    }
 }
 
 div.heroes {
     img {
         display: inline-block;
     }
-
-    // label {
-    //     font-size: 0;
-    // }
 }
 
 form fieldset:nth-of-type(4) {
@@ -259,13 +266,10 @@ form fieldset:nth-of-type(4) {
     input {
         border: none;
         height: 2em;
-        width: auto;
+        width: 12em;
         border-radius: 2em;
         background: #b0d289;
         font-size: 1em;
-        position: absolute;
-        top: 15em;
-        left: -28.3em;
         margin-right: .9em;
         font-weight: 800;
         color: #1c441c;
@@ -276,7 +280,9 @@ form fieldset:nth-of-type(4) {
 div.svg-shirt-render {
     margin: auto;
     display: block;
-    position: relative;
+    position: sticky;
+    top: 0em;
+    float:left;
 
     .shirt-container {
         position: relative;
@@ -334,6 +340,8 @@ input[type="button"] {
     display: block;
     margin: auto;
     margin-bottom: 5em;
+    width: 15em;
+    transition:300ms ease;
 }
 
 span {
@@ -361,8 +369,8 @@ p {
 @media only screen and (min-width: 1280px) {
 
     .container {
-        display: flex;
-
+        display: table;
+        width: 100vw;
         fieldset {
             width: 37vw;
         }
@@ -370,34 +378,85 @@ p {
         form {
             display: block;
             width: 50%;
+            float:right;
             // height: 41em;
             // overflow: scroll;
         }
+
         // fieldset:nth-of-type(3) {
         //     position: absolute;
         //     top: 0;
         //     right: 5em;
         // }
+        form fieldset:nth-of-type(4) {
+            border: none;
+            background: none;
+
+            input {
+                border-radius: 2em;
+                background: #b0d289;
+                font-size: 1em;
+                margin-right: .9em;
+                font-weight: 800;
+                color: #1c441c;
+                float:right;
+                transition:300ms ease;
+            }
+        }
+        div.svg-shirt-render {
+
+            margin: auto;
+            position: sticky;
+            top: 0;
+            float: left;
+        
+        }
+        .container form {
+
+            display: block;
+            width: 50%;
+            float: right;
+        }
+
     }
 
     div.first-form {
-        form {
-            display: flex;
-        }
 
         fieldset {
             width: 37em
         }
     }
-
-
-
 }
 
+input[type="text"]:hover {
+    width: 40em;
+}
 
 
 ul {
     display: none;
 }
+
+//hover fun
+input[type="button"]:hover {
+    width: 17em;
+    background: black;
+}
+
+form fieldset:nth-of-type(4) input:hover {
+    background: white;
+    color: black;
+    border: black 3px solid;
+    width: 15em;
+}
+
+label:hover {
+
+    border: 1px black solid;
+    opacity: 1;
+    transform: rotate(2deg);
+
+}
+
 
 @import 'print.scss';
