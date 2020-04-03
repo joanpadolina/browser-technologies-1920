@@ -116,4 +116,5 @@ I'm not sure which content are important in the wiki?
 ## Credits
 * [Menno](https://github.com/Mennauu) // explained creating a json file through a server
 * [Lien](https://github.com/nlvo) // mongodb guidance
+* Chelsea // mental support and readme guidance
 
