@@ -105,8 +105,15 @@ I've been stuck with this subject because I focused on a working form which took
 * WIKI
 
 I'm not sure which content are important in the wiki? 
+## Sources
+
+* MDN
+* W3Schools
+* CanIUse
+* Stackoverflow
 
 
 ## Credits
 * [Menno](https://github.com/Mennauu) // explained creating a json file through a server
 * [Lien](https://github.com/nlvo) // mongodb guidance
+
