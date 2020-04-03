@@ -9,7 +9,7 @@ if (document.addEventListener) {
         h2.innerHTML = text.value
     })
 } else if (document.attachEvent) {
-    text.attachEvent('oninput', () => {
+    text.attachEvent('oninput', function() {
         h2.innerHTML = text.value
     })
 }
@@ -20,7 +20,7 @@ if (document.addEventListener) {
 
     })
 } else if (document.attachEvent) {
-    h2.addEventListener('oninput', () => {
+    h2.addEventListener('oninput', function() {
         text.value = h2.innerHTML
 
     })
@@ -41,7 +41,7 @@ if (document.addEventListener) {
     }
 } else if (document.attachEvent) {
     for (const item of colorShirt) {
-        item.attachEvent('onchange', () => {
+        item.attachEvent('onchange', function() {
             svg.setAttribute('style', `fill:${item.value}`)
         })
     }
@@ -59,7 +59,7 @@ if (document.addEventListener) {
     }
 } else if (document.attachEvent) {
     for (const item of colorText) {
-        item.attachEvent('onchange', () => {
+        item.attachEvent('onchange', function() {
             h2.setAttribute('style', `color:${item.value}`)
         })
     }
@@ -80,7 +80,7 @@ if (document.addEventListener) {
     }
 } else if (document.attachEvent) {
     for (const item of iconSet) {
-        item.attachEvent('onchange', () => {
+        item.attachEvent('onchange', function() {
             iconPlace.setAttribute('src', `/img/svg/icon/${item.value}.svg`)
         })
     }
