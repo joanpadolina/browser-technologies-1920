@@ -151,7 +151,7 @@ form {
 
     fieldset {
         background: white;
-        margin: 1em;
+        margin: 1em auto;
         width: 90vw;
         border: 0.5em solid
     }
@@ -357,7 +357,7 @@ div.svg-shirt-render .shirt-container {
 }
 
 p {
-    width: 27em;
+    // width: 27em;
     text-align: center;
     line-height: 3em;
     margin: auto;

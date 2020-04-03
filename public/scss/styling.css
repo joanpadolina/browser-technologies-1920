@@ -98,7 +98,7 @@ form {
   text-align: center; }
   form fieldset {
     background: white;
-    margin: 1em;
+    margin: 1em auto;
     width: 90vw;
     border: 0.5em solid; }
   form legend {
@@ -253,7 +253,6 @@ div.svg-shirt-render .shirt-container {
   width: 31em; }
 
 p {
-  width: 27em;
   text-align: center;
   line-height: 3em;
   margin: auto; }
