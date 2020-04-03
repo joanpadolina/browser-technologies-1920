@@ -79,6 +79,7 @@ text: "text here"
 colorshirt: "Yellow"
 colortext: "Black"
 type: "Long-sleeve"
+hero:"Avenger"
 
 ```
 
